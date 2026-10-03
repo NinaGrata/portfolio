@@ -11588,8 +11588,9 @@ html {
   max-width: 40rem;
 }
 .profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
+  height: 100%;             /* 1. Forces the image to match the container's height */
+  width: auto;              /* 2. Keeps the image's original proportions perfect */
+  object-fit: contain;      /* 3. Ensures the full image fits cleanly inside without being squeezed */
   position: absolute;
   bottom: 0;
   left: 50%;
